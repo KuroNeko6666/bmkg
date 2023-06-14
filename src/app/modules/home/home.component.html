@@ -1,0 +1,69 @@
+<div class="flex flex-col min-h-[1080px] max-h-[1080px] max-w-[1920px] text-lg p-5 gap-5 overflow-x-hidden overflow-y-hidden relative bg-slate-300">
+    <div class="flex flex-row w-full bg-gray-200 transition-all duration-1000 z-20" [ngClass]="show ? '-translate-x-0' : '-translate-x-[110%]'">
+      <div class="w-1/4 px-5 py-4 bg-gray-500 text-white text-center">
+        <span>{{info == 2 ? 'PPeringatan Dini Cuaca' : 'Perikiraan Cuaca'}}</span>
+      </div>
+      <div class="flex-1 px-5 py-4 font-bold text-center">
+        <span>BANDUNG</span>
+      </div>
+      <div class="w-1/4 px-5 py-4 bg-gray-500 text-white text-center">
+        <span>Jawa Barat</span>
+      </div>
+    </div>
+    <div class="flex flex-row justify-center gap-5 delay-1000 transition-all duration-1000 " [ngClass]="show ? '-translate-y-0 opacity-100' : '-translate-y-[300%] opacity-0'">
+      <ng-container *ngFor="let item of data; let i = index">
+        <div class="w-1/4 px-5 py-4 text-white text-center transition-all duration-300" [ngClass]="i == current ? 'bg-slate-700 scale-105' : 'bg-slate-400'" (click)="changeDate(i)">
+          {{ item.date }}
+        </div>
+      </ng-container>
+    </div>
+    <div class="flex-1 flex flex-row py-24 px-32 gap-10 justify-center">
+
+      <ng-container *ngIf="info < 2">
+        <ng-container *ngFor="let item of data[current].info[info].data; let i = index">
+            <app-card-weather [data]="item" [class]="'transition-all duration-1000 ' + delay[i] " [ngClass]=" showWeather ? 'translate-y-0' : 'translate-y-[200%]'"></app-card-weather>
+        </ng-container>
+      </ng-container>
+
+      <ng-container *ngIf="info > 1" >
+        <div class="flex-1 flex flex-row gap-5 transition-all duration-1000" [ngClass]=" showWeather ? 'translate-y-0' : 'translate-y-[200%]'">
+          <div class="w-1/2 bg-slate-400">
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=bogor&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://embedgooglemap.2yu.co/">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+          </div>
+          <div class="flex-1 flex flex-col gap-5">
+            <div class="h-32 bg-slate-400 w-full flex flex-row  place-items-center justify-between">
+              <div class="px-5 bg-black  h-full text-white flex flex-row place-items-center justify-center">
+                <i class="fa-solid fa-cloud-bolt text-8xl"></i>
+              </div>
+              <span class="flex-1 font-bold my-auto text-3xl text-center">Potensi Hujan Lebat Disertai Petir</span>
+            </div>
+            <div class="flex-1 flex flex-row bg-slate-400">
+              <ul class="flex-1 flex flex-col gap-2 justify-center p-10 text-3xl font-bold bg-slate-500">
+                <li class=" list-disc">Ciampea</li>
+                <li class=" list-disc">Cibungbulang</li>
+                <li class=" list-disc">Leuwiliang</li>
+                <li class=" list-disc">Jasinga</li>
+                <li class=" list-disc">Dramaga</li>
+              </ul>
+              <div class="flex-1 text-2xl font-bold flex flex-col justify-center place-items-center p-10">
+                <p class="text-center">Waspada disertai hujan lebat dan petir diwilayah tersebut pada waktu siang hingga malam hari</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+
+    </div>
+    <div class="flex flex-row w-full bg-gray-200 z-10">
+      <div class="w-1/4 px-5 py-4 bg-gray-500 text-white text-center flex flex-row justify-around place-items-center">
+        <img src="https://cdn.bmkg.go.id/Web/Logo-BMKG-new.png" class="h-14" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Coat_of_arms_of_West_Java.svg/1756px-Coat_of_arms_of_West_Java.svg.png" class="h-14" alt="">
+        <span>11:10 WIB</span>
+      </div>
+      <div class="flex-1 px-5 py-4 font-bold text-center flex flex-col place-items-center justify-center">
+        <span>{{"< Informasi Tambahan >" }}</span>
+      </div>
+    </div>
+  </div>
+
