@@ -8,6 +8,7 @@ export interface Info {
 }
 
 export interface Weather {
+  icon: string
   title: string
   time: string
   celcius: string

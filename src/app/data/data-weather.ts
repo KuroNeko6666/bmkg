@@ -2,11 +2,12 @@ import { Weather, WeatherPrediction } from "../model/weather.model";
 
 export const DATA: WeatherPrediction[] = [
   {
-    date: "Senin, 10 Jan 2022",
+    date: "Senin, 2 Jan 2022",
     info : [
       {
         data: [
           {
+            icon:"fa-cloud-rain",
             title: "Hujan Sedang",
             time: "00:00 WIB",
             celcius: "20c",
@@ -14,21 +15,24 @@ export const DATA: WeatherPrediction[] = [
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
+            icon:"fa-cloud-bolt",
+            title: "Hujan Lebat",
             time: "03:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
+            icon:"fa-sun",
+            title: "Cerah",
             time: "06:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
+            icon:"fa-cloud-sun",
+            title: "Berawan",
             time: "09:00 WIB",
             celcius: "20c",
             wind: "1km/j",
@@ -36,92 +40,90 @@ export const DATA: WeatherPrediction[] = [
           }
         ]
       },
+
       {
         data: [
           {
-            title: "Hujan Deras",
+            icon:"fa-cloud-rain",
+            title: "Hujan Sedang",
             time: "12:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
+            icon:"fa-cloud-bolt",
+            title: "Hujan Lebat",
             time: "15:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
+            icon:"fa-sun",
+            title: "Cerah",
             time: "18:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
+            icon:"fa-cloud-sun",
+            title: "Berawan",
             time: "21:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           }
         ]
-      }
+      },
+
     ]
   },
   {
-    date: "Senin, 10 Jan 2022",
+    date: "Selasa, 3 Jan 2022",
     info : [
       {
         data: [
           {
+            icon:"fa-cloud-rain",
             title: "Hujan Sedang",
-            time: "10:00 WIB",
+            time: "00:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "11:00 WIB",
+            icon:"fa-cloud-bolt",
+            title: "Hujan Lebat",
+            time: "03:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "12:00 WIB",
+            icon:"fa-sun",
+            title: "Cerah",
+            time: "06:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "13:00 WIB",
+            icon:"fa-cloud-sun",
+            title: "Berawan",
+            time: "09:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           }
         ]
       },
+
       {
         data: [
           {
-            title: "Hujan Sedang",
-            time: "10:00 WIB",
-            celcius: "20c",
-            wind: "1km/j",
-            water: "80%"
-          },
-          {
-            title: "Hujan Sedang",
-            time: "11:00 WIB",
-            celcius: "20c",
-            wind: "1km/j",
-            water: "80%"
-          },
-          {
+            icon:"fa-cloud-rain",
             title: "Hujan Sedang",
             time: "12:00 WIB",
             celcius: "20c",
@@ -129,68 +131,78 @@ export const DATA: WeatherPrediction[] = [
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "13:00 WIB",
-            celcius: "20c",
-            wind: "1km/j",
-            water: "80%"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    date: "Senin, 10 Jan 2022",
-    info : [
-      {
-        data: [
-          {
-            title: "Hujan Sedang",
-            time: "10:00 WIB",
+            icon:"fa-cloud-bolt",
+            title: "Hujan Lebat",
+            time: "15:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "11:00 WIB",
+            icon:"fa-sun",
+            title: "Cerah",
+            time: "18:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "12:00 WIB",
-            celcius: "20c",
-            wind: "1km/j",
-            water: "80%"
-          },
-          {
-            title: "Hujan Sedang",
-            time: "13:00 WIB",
+            icon:"fa-cloud-sun",
+            title: "Berawan",
+            time: "21:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           }
         ]
       },
+
+    ]
+  },
+  {
+    date: "Rabu, 3 Jan 2022",
+    info : [
       {
         data: [
           {
+            icon:"fa-cloud-rain",
             title: "Hujan Sedang",
-            time: "10:00 WIB",
+            time: "00:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "11:00 WIB",
+            icon:"fa-cloud-bolt",
+            title: "Hujan Lebat",
+            time: "03:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           },
           {
+            icon:"fa-sun",
+            title: "Cerah",
+            time: "06:00 WIB",
+            celcius: "20c",
+            wind: "1km/j",
+            water: "80%"
+          },
+          {
+            icon:"fa-cloud-sun",
+            title: "Berawan",
+            time: "09:00 WIB",
+            celcius: "20c",
+            wind: "1km/j",
+            water: "80%"
+          }
+        ]
+      },
+
+      {
+        data: [
+          {
+            icon:"fa-cloud-rain",
             title: "Hujan Sedang",
             time: "12:00 WIB",
             celcius: "20c",
@@ -198,14 +210,32 @@ export const DATA: WeatherPrediction[] = [
             water: "80%"
           },
           {
-            title: "Hujan Sedang",
-            time: "13:00 WIB",
+            icon:"fa-cloud-bolt",
+            title: "Hujan Lebat",
+            time: "15:00 WIB",
+            celcius: "20c",
+            wind: "1km/j",
+            water: "80%"
+          },
+          {
+            icon:"fa-sun",
+            title: "Cerah",
+            time: "18:00 WIB",
+            celcius: "20c",
+            wind: "1km/j",
+            water: "80%"
+          },
+          {
+            icon:"fa-cloud-sun",
+            title: "Berawan",
+            time: "21:00 WIB",
             celcius: "20c",
             wind: "1km/j",
             water: "80%"
           }
         ]
-      }
+      },
+
     ]
   },
 ]
