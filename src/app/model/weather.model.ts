@@ -1,10 +1,12 @@
-export interface WeatherPrediction {
-  date: string
-  info: Info[]
+export interface DataWeather {
+  city: string
+  province: string
+  data: DateWeather[]
 }
 
-export interface Info {
-  data: Weather[]
+export interface DateWeather {
+  date: string
+  prediction: Weather[]
 }
 
 export interface Weather {

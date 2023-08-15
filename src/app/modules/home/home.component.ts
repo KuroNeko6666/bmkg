@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { DATA } from 'src/app/data/data-weather';
+import { DataWeather } from 'src/app/model/weather.model';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,11 @@ import { DATA } from 'src/app/data/data-weather';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor(){}
 
-  data = DATA
+  constructor(private service: WeatherService){}
+
+  data: DataWeather = DATA[0]
+  date: number = 0
   current: number = 0
   show: boolean = false
   public showWeather: boolean = false
@@ -18,11 +22,21 @@ export class HomeComponent implements OnInit {
   delay = ['delay-[1000ms]', 'delay-[1100ms]', 'delay-[1200ms]', 'delay-[1300ms]']
 
   ngOnInit(): void {
-    setInterval(() => this.intervalIndex(), 5000)
+    this.service.observer.subscribe(res => this.data = res)
     setTimeout(() => { this.show = true }, 1000)
-    setTimeout(() => { this.showWeather = true }, 1000)
+    setTimeout(() => {
+      this.showWeather = true
+      setInterval(() => this.intervalIndex(), 16000)
+     }, 8000)
   }
 
+  get currentData() {
+   if (this.info == 0) {
+    return this.data.data[this.date].prediction.slice(0, 4)
+   }
+   return this.data.data[this.date].prediction.slice(4, 9)
+
+  }
 
   changeDate(index: number) {
     this.current = index
